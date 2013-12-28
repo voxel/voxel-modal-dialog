@@ -1,0 +1,17 @@
+{
+    "name": "voxel-modal-dialog",
+    "description": "modal dialog element using voxel-modal (voxel.js)",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:deathcap/voxel-modal-dialog.git"
+    },
+    "dependencies": {
+        "voxel-modal": "git://github.com/deathcap/voxel-modal.git",
+        "inherits": "1.0.0",
+        "ever": "0.0.3"
+    },
+    "peerDependencies": {
+        "voxel-engine": ">=0.19.0"
+    }
+}
