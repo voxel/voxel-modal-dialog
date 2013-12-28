@@ -32,9 +32,8 @@
         this.box.appendChild(content);
       }
       document.body.appendChild(this.box);
-      ModalDialog.__super__.constructor.call(this, game, {
-        element: this.box
-      });
+      opts.element = this.box;
+      ModalDialog.__super__.constructor.call(this, game, opts);
     }
 
     return ModalDialog;

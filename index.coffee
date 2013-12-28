@@ -22,7 +22,9 @@ class ModalDialog extends Modal
 
     document.body.appendChild(@box)
 
-    super game, {element: @box}
+    opts.element = @box
+
+    super game, opts
 
 module.exports = ModalDialog
 
