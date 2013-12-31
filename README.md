@@ -14,6 +14,12 @@ Used by:
 * [voxel-chest](https://github.com/deathcap/voxel-chest)
 * [voxel-inventory-dialog](https://github.com/deathcap/voxel-inventory-dialog)
 
+Example screenshot:
+
+![screenshot](http://i.imgur.com/aB3oHzP.png "Screenshot")
+
+(Note: the element is empty by default)
+
 ## License
 
 MIT
