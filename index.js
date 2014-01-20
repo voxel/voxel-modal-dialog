@@ -18,20 +18,22 @@
       if (opts.contents == null) {
         opts.contents = [];
       }
-      this.box = document.createElement('div');
-      this.box.style.border = '6px outset gray';
-      this.box.style.visibility = 'hidden';
-      this.box.style.position = 'absolute';
-      this.box.style.top = '20%';
-      this.box.style.left = '30%';
-      this.box.style.zIndex = 1;
-      this.box.style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%)';
-      _ref = opts.contents;
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        content = _ref[_i];
-        this.box.appendChild(content);
+      if (typeof document !== "undefined" && document !== null) {
+        this.box = document.createElement('div');
+        this.box.style.border = '6px outset gray';
+        this.box.style.visibility = 'hidden';
+        this.box.style.position = 'absolute';
+        this.box.style.top = '20%';
+        this.box.style.left = '30%';
+        this.box.style.zIndex = 1;
+        this.box.style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%)';
+        _ref = opts.contents;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          content = _ref[_i];
+          this.box.appendChild(content);
+        }
+        document.body.appendChild(this.box);
       }
-      document.body.appendChild(this.box);
       opts.element = this.box;
       ModalDialog.__super__.constructor.call(this, game, opts);
     }
