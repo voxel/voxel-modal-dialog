@@ -19,20 +19,23 @@
         opts.contents = [];
       }
       if (typeof document !== "undefined" && document !== null) {
+        this.aligner = document.createElement('div');
+        this.aligner.setAttribute('class', 'voxel-modal-dialog-aligner');
+        this.aligner.setAttribute('style', 'display: flex; align-items: center; justify-content: center; top: 0px; left: 0px; width: 100%; height: 90%; position: fixed; pointer-events: none;');
         this.box = document.createElement('div');
+        this.box.setAttribute('class', 'voxel-modal-dialog');
         this.box.style.border = '6px outset gray';
         this.box.style.visibility = 'hidden';
-        this.box.style.position = 'absolute';
-        this.box.style.top = '20%';
-        this.box.style.left = '30%';
         this.box.style.zIndex = 1;
+        this.box.style.pointerEvents = 'auto';
         this.box.style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 100%)';
         _ref = opts.contents;
         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
           content = _ref[_i];
           this.box.appendChild(content);
         }
-        document.body.appendChild(this.box);
+        this.aligner.appendChild(this.box);
+        document.body.appendChild(this.aligner);
       }
       opts.element = this.box;
       ModalDialog.__super__.constructor.call(this, game, opts);
