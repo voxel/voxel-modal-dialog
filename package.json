@@ -13,7 +13,7 @@
     "widget"
   ],
   "dependencies": {
-    "voxel-modal": "~0.1.1"
+    "voxel-modal": "^0.2.0"
   },
   "license": "MIT"
 }
