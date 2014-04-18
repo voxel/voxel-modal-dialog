@@ -1,7 +1,7 @@
 {
   "name": "voxel-modal-dialog",
   "description": "modal dialog element using voxel-modal (voxel.js plugin)",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dialog.js",
   "repository": {
     "type": "git",
