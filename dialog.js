@@ -8,7 +8,7 @@ class ModalDialog extends Modal {
   }
 
   static createDialogContent(opts) {
-    if (opts.contents) opts.contents = [];
+    if (!opts.contents) opts.contents = [];
 
     let box;
 
